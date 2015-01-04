@@ -8,7 +8,7 @@
 </head>
 <body>
 <%if (true){%>
-<form method="get" action = "/LimpsWebsite/Truc">
+<form method="get" action = "/LimpsWebsite/Enregistrer">
 Pseudo:<input type="text" name="nb1">
 <br>
 Password:<input type="text" name="nb2">
@@ -22,5 +22,8 @@ Prenom:<input type="text" name="nb4">
 <br>
 <%=request.getAttribute("team") %>
 
+<form method="get" action = "/LimpsWebsite/Connection">
+<input type = "submit" value="OK">
+</form>
 </body>
 </html>
