@@ -11,14 +11,14 @@ import baseDeDonnees.*;
 /**
  * Servlet implementation class calc
  */
-@WebServlet("/Truc")
-public class Truc extends HttpServlet {
+@WebServlet("/Connection")
+public class Connection extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private Interface inter = Interface.getInstance();
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Truc() {
+    public Connection() {
         super();
         // TODO Auto-generated constructor stub
         
@@ -37,9 +37,13 @@ public class Truc extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		inter.addCompte(request.getParameter("nb1"), request.getParameter("nb2"), request.getParameter("nb3"), request.getParameter("nb4"));
-		request.setAttribute("team", inter.getCompte());
-		request.getRequestDispatcher("result.jsp").forward(request, response);
+		if(request.getParameter("pseudo")!=null && request.getParameter("password")!=null && inter.connection(request.getParameter("pseudo"), request.getParameter("password"))){
+			System.out.println("connected");
+			request.setAttribute("nom", request.getParameter("pseudo"));
+			request.getRequestDispatcher("Connected.jsp").forward(request, response);
+		} else {
+			request.getRequestDispatcher("Account.html").forward(request, response);;
+		}
 	}
 
 }

@@ -26,4 +26,14 @@ public class Interface {
 		}
 		return st;
 	}
+	
+	public boolean connection(String pPseudo, String pMDP){
+		boolean bool = false;
+		for(Compte compte : comptes){
+			if(pPseudo.equals(compte.getLogin()) && pMDP.equals(compte.getPassword())){
+				bool= true;
+			}
+		}
+		return bool;
+	}
 }
