@@ -29,30 +29,30 @@ public class Team {
 	private Set<Match> matchs2 = new HashSet<Match>();
 	
 
-	public Set<Match> getMatch1() {
+	Set<Match> getMatch1() {
 		return matchs1;
 	}
 
-	public void ajouterMatch1(Match match) {
+	void ajouterMatch1(Match match) {
 		matchs1.add(match);
 	}
 
-	public void ajouterMatch2(Match match) {
+	void ajouterMatch2(Match match) {
 		matchs2.add(match);
 	}
 
-	public Set<Match> getMatch2() {
+	Set<Match> getMatch2() {
 		return matchs2;
 	}
 
-	public Team(String pNom, Compte pCapitaine) {
+	Team(String pNom, Compte pCapitaine) {
 		nom = pNom;
 		Joueurs = new HashSet<Compte>();
 		Joueurs.add(pCapitaine);
 		Capitaine = pCapitaine;
 	}
 
-	public Team(String pNom, Compte pCapitaine, String pDescription) {
+	Team(String pNom, Compte pCapitaine, String pDescription) {
 		nom = pNom;
 		Joueurs = new HashSet<Compte>();
 		pCapitaine.setTeam(this);
@@ -60,23 +60,23 @@ public class Team {
 		Description = pDescription;
 	}
 
-	public void ajouterJoueur(Compte pCompte) {
+	void ajouterJoueur(Compte pCompte) {
 		Joueurs.add(pCompte);
 	}
 
-	public String getNom() {
+	String getNom() {
 		return nom;
 	}
 
-	public void setNom(String nom) {
+	void setNom(String nom) {
 		this.nom = nom;
 	}
 
-	public String getLogo() {
+	String getLogo() {
 		return logo;
 	}
 
-	public void setLogo(String logo) {
+	void setLogo(String logo) {
 		this.logo = logo;
 	}
 

@@ -16,7 +16,7 @@ public class Match {
 	private Team team2;
 	private Date date;
 	
-	public Match(int pId, Team pteam1, Team pTeam2,Date pDate) {
+	Match(int pId, Team pteam1, Team pTeam2,Date pDate) {
 		id=pId;
 		date=pDate;
 		team1=pteam1;
@@ -25,27 +25,27 @@ public class Match {
 		team2.ajouterMatch2(this);
 	}
 
-	public Date getDate() {
+	Date getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	void setDate(Date date) {
 		this.date = date;
 	}
 
-	public int getId() {
+	int getId() {
 		return id;
 	}
 
-	public Team getTeam1() {
+	Team getTeam1() {
 		return team1;
 	}
 
-	public Team getTeam2() {
+	Team getTeam2() {
 		return team2;
 	}
 	
-	public String toString(){
+	public  String toString(){
 		return id +"[" + team1.getNom() + "," + team2.getNom() + "]" + date; 
 	}
 }

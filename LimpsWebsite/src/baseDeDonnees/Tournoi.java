@@ -7,14 +7,14 @@ import java.util.HashSet;
 public class Tournoi {
 HashSet<Team> teams = new HashSet<Team>();
 HashSet<Match> poules = new HashSet<Match>();
-public Tournoi() {
+Tournoi() {
 }
 
-public void ajouterMatchPoules(Match pMatch){
+void ajouterMatchPoules(Match pMatch){
 	poules.add(pMatch);
 }
 
-public void ajouterTeams(Team pteam){
+void ajouterTeams(Team pteam){
 	teams.add(pteam);
 }
 

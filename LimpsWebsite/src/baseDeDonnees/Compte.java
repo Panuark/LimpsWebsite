@@ -21,14 +21,14 @@ public class Compte {
 	private Team team;
 	private String CompteLOL;
 
-	public Compte(String pLogin, String pPassword, String pNom, String pPrenom) {
+	Compte(String pLogin, String pPassword, String pNom, String pPrenom) {
 		login = pLogin;
 		password = pPassword;
 		nom = pNom;
 		prenom = pPrenom;
 	}
 	
-	public Compte(String pLogin, String pPassword, String pNom, String pPrenom, String pDescription) {
+	Compte(String pLogin, String pPassword, String pNom, String pPrenom, String pDescription) {
 		login = pLogin;
 		password = pPassword;
 		nom = pNom;
@@ -36,35 +36,35 @@ public class Compte {
 		description=pDescription;
 	}
 
-	public String getPassword() {
+	String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
+	void setPassword(String password) {
 		this.password = password;
 	}
 
-	public String getDescription() {
+	String getDescription() {
 		return description;
 	}
 
-	public void setDescription(String description) {
+	void setDescription(String description) {
 		this.description = description;
 	}
 
-	public boolean isAdmin() {
+	boolean isAdmin() {
 		return admin;
 	}
 
-	public void setAdmin(boolean admin) {
+	void setAdmin(boolean admin) {
 		this.admin = admin;
 	}
 
-	public Team getTeam() {
+	Team getTeam() {
 		return team;
 	}
 
-	public String setTeam(Team pteam) {
+	String setTeam(Team pteam) {
 		if (team == null){
 			if (pteam.size() < 9) {
 				this.team = pteam;
@@ -78,31 +78,31 @@ public class Compte {
 		}
 	}
 
-	public String getCompteLOL() {
+	String getCompteLOL() {
 		return CompteLOL;
 	}
 
-	public void setCompteLOL(String compteLOL) {
+	void setCompteLOL(String compteLOL) {
 		CompteLOL = compteLOL;
 	}
 
-	public String getLogin() {
+	String getLogin() {
 		return login;
 	}
 
-	public String getNom() {
+	String getNom() {
 		return nom;
 	}
 
-	public String getPrenom() {
+	String getPrenom() {
 		return prenom;
 	}
 
-	public boolean isCapitaine() {
+	boolean isCapitaine() {
 		return team != null && this == team.getCapitaine();
 	}
 
-	public Boolean connection(String pPassword){
+	Boolean connection(String pPassword){
 		return pPassword==password;
 	}
 	
